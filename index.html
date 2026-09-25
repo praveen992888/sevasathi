@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Seva Sathi | घर पर सेवा | अपनों की देखभाल
+  </title>
+
+  <meta
+    name="description"
+    content="Seva Sathi - घर पर सुरक्षित, भरोसेमंद और professional nursing care."
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+  <div class="container nav-container">
+
+   <a
+  href="#home"
+  class="logo"
+  onclick="secretAdminTap(event)"
+>
+
+      <div class="logo-icon">
+        ❤️
+      </div>
+
+      <div>
+
+        <h2>
+          Seva Sathi
+        </h2>
+
+        <span>
+          घर पर सेवा | अपनों की देखभाल
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav
+      class="navbar"
+      id="navbar"
+    >
+
+      <a
+        href="#home"
+        class="active"
+      >
+        Home
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#why-us">
+        Why Us
+      </a>
+
+      <a href="#tracking">
+        Tracking
+      </a>
+
+      <a href="#about">
+        About Us
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+
+      <div class="mobile-auth">
+
+        <button
+  class="btn dashboard-btn"
+  onclick="openPatientDashboard()"
+>
+  👤 Patient Dashboard
+<button
+  <button
+  class="btn dashboard-btn"
+  onclick="openUserDashboard()"
+>
+  📋 My Dashboard
+</button>
+        
+        <button
+  onclick="openNurseLogin()"
+  style="
+    background:#0878d1;
+    color:white;
+    margin-left:8px;
+  "
+>
+  👩‍⚕️ Nurse Panel
+</button>
+      </div>
+
+    </nav>
+
+
+    <div class="desktop-auth">
+
+      <button
+        class="btn login-btn"
+        onclick="openLogin()"
+      >
+        👤 Login
+      </button>
+
+      <button
+        class="btn register-btn"
+        onclick="openRegister()"
+      >
+        Register
+      </button>
+
+      <button
+  onclick="openAdminLogin()"
+  style="background:#7c3aed;color:white;padding:10px 15px;border:0;border-radius:8px;cursor:pointer;"
+>
+  👑 Admin Login
+      </button>
+
+    </div>
+
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+    >
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+  class="hero"
+  id="home"
+>
+
+  <div class="container hero-content">
+
+
+    <div class="hero-text">
+
+      <div class="trust-badge">
+        ✓ Professional
+        &nbsp; • &nbsp;
+    
+        
+        
+        
+        ✓ Trusted
+        &nbsp; • &nbsp;
+        ✓ 24/7 Support
+      </div>
+
+
+      <h1>
+        Seva
+        <span>
+          Sathi
+        </span>
+      </h1>
+
+
+      <h2>
+        घर पर सेवा | अपनों की देखभाल
+      </h2>
+
+
+      <p>
+        अब अपने घर पर ही प्राप्त करें
+        सुरक्षित, भरोसेमंद और professional
+        nursing care।
+      </p>
+
+
+      <div class="hero-features">
+
+        <div>
+          <span>👩‍⚕️</span>
+          <b>Skilled Nurses</b>
+        </div>
+
+        <div>
+          <span>🕐</span>
+          <b>24/7 Support</b>
+        </div>
+
+        <div>
+          <span>🛡️</span>
+          <b>Safe & Reliable</b>
+        </div>
+
+        <div>
+          <span>❤️</span>
+          <b>Compassionate Care</b>
+        </div>
+
+      </div>
+
+
+      <div class="hero-buttons">
+
+        <button
+          class="primary-btn"
+          onclick="bookService()"
+        >
+          📅 Book a Service
+        </button>
+
+        <a
+          href="#services"
+          class="secondary-btn"
+        >
+          Explore Services →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+      <div class="hero-image-wrapper">
+
+ <div class="hero-image-wrapper">
+
+  
+
+</div>
+
+      <div class="image-support-card">
+        👩‍⚕️ 24/7 Care
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+  class="services-section"
+  id="services"
+>
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <span>
+        Our Services
+      </span>
+
+      <h2>
+        हमारी प्रमुख Nursing Services
+      </h2>
+
+      <p>
+        आपकी जरूरत के अनुसार
+        professional home nursing services।
+      </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+      <!-- SERVICE 1 -->
+
+      <div class="service-card">
+
+        <div class="service-icon blue">
+          👴
+        </div>
+
+        <h3>
+          बुजुर्गों की देखभाल
+        </h3>
+
+        <p>
+          बुजुर्ग मरीजों की सुरक्षित
+          और सम्मानजनक देखभाल।
+        </p>
+
+        <button
+          onclick="selectService('Elderly Care')"
+        >
+          View Details →
+        </button>
+
+      </div>
+
+
+
+      <!-- SERVICE 2 -->
+
+      <div class="service-card">
+
+        <div class="service-icon green">
+          👶
+        </div>
+
+        <h3>
+          माँ एवं शिशु देखभाल
+        </h3>
+
+        <p>
+          माँ और बच्चे के लिए विशेष
+          home care support।
+        </p>
+
+        <button
+          onclick="selectService('Mother & Baby Care')"
+        >
+          View Details →
+        </button>
+
+      </div>
+
+
+
+      <!-- SERVICE 3 -->
+
+      <div class="service-card">
+
+        <div class="service-icon purple">
+          💉
+        </div>
+
+        <h3>
+          Injection / Dressing
+        </h3>
+
+        <p>
+          आवश्यक nursing care और
+          dressing support।
+        </p>
+
+        <button
+          onclick="selectService('Injection / Dressing')"
+        >
+          View Details →
+        </button>
+
+      </div>
+
+
+
+      <!-- SERVICE 4 -->
+
+      <div class="service-card">
+
+        <div class="service-icon orange">
+          🛏️
+        </div>
+
+        <h3>
+          Post Hospital Care
+        </h3>
+
+        <p>
+          अस्पताल से घर आने के बाद
+          recovery support।
+        </p>
+
+        <button
+          onclick="selectService('Post Hospital Care')"
+        >
+          View Details →
+        </button>
+
+      </div>
+
+
+
+      <!-- SERVICE 5 -->
+
+      <div class="service-card">
+
+        <div class="service-icon pink">
+          💊
+        </div>
+
+        <h3>
+          Medicine Management
+        </h3>
+
+        <p>
+          दवाइयों के समय और care में
+          सहायता।
+        </p>
+
+        <button
+          onclick="selectService('Medicine Management')"
+        >
+          View Details →
+        </button>
+
+      </div>
+
+
+
+      <!-- SERVICE 6 -->
+
+      <div class="service-card">
+
+        <div class="service-icon teal">
+          ❤️
+        </div>
+
+        <h3>
+          Vital Monitoring
+        </h3>
+
+        <p>
+          BP, Temperature, Pulse आदि
+          की monitoring।
+        </p>
+
+        <button
+          onclick="selectService('Vital Monitoring')"
+        >
+          View Details →
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section
+  class="why-section"
+  id="why-us"
+>
+
+  <div class="container why-container">
+
+
+    <div class="why-visual">
+
+      <div class="big-heart">
+        ❤️
+      </div>
+
+      <div class="care-badge">
+
+        🩺
+        <br>
+
+        Professional
+        <br>
+
+        Care
+
+      </div>
+
+    </div>
+
+
+
+    <div class="why-content">
+
+      <span class="section-label">
+        Why Choose Us?
+      </span>
+
+      <h2>
+        Seva Sathi क्यों?
+      </h2>
+
+      <p>
+        हमारा उद्देश्य है कि आपको
+        सुरक्षित, भरोसेमंद और
+        professional nursing care
+        आपके घर पर मिले।
+      </p>
+
+
+      <div class="why-grid">
+
+
+        <div class="why-card">
+
+          <span>
+            👩‍⚕️
+          </span>
+
+          <div>
+
+            <h3>
+              Trained Nurses
+            </h3>
+
+            <p>
+              प्रशिक्षित nursing professionals
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="why-card">
+
+          <span>
+            🏠
+          </span>
+
+          <div>
+
+            <h3>
+              Home Care
+            </h3>
+
+            <p>
+              आपके घर पर convenient service
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="why-card">
+
+          <span>
+            🕐
+          </span>
+
+          <div>
+
+            <h3>
+              24/7 Support
+            </h3>
+
+            <p>
+              जरूरत के समय सहायता
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="why-card">
+
+          <span>
+            🛡️
+          </span>
+
+          <div>
+
+            <h3>
+              Safe & Reliable
+            </h3>
+
+            <p>
+              सुरक्षित और भरोसेमंद प्रक्रिया
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRACKING
+===================================================== -->
+
+<section
+  class="tracking-section"
+  id="tracking"
+>
+
+  <div class="container tracking-container">
+
+
+    <div class="map-area">
+
+      <div class="map-grid">
+
+        <div class="road road-1"></div>
+
+        <div class="road road-2"></div>
+
+        <div class="road road-3"></div>
+
+
+        <div class="map-place place-1">
+          🏠 Patient
+        </div>
+
+        <div class="map-place place-2">
+          🏥 Hospital
+        </div>
+
+
+        <div class="nurse-location">
+
+          👩‍⚕️
+
+          <span></span>
+
+        </div>
+
+
+        <div class="route-line"></div>
+
+      </div>
+
+
+      <div class="map-info">
+
+        <div class="location-status">
+
+          <span class="online-dot"></span>
+
+          <div>
+
+            <strong>
+              Nurse Status
+            </strong>
+
+            <small>
+              Assignment pending
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <button
+          onclick="trackNurse()"
+        >
+          📍 Track Nurse
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tracking-text">
+
+      <span class="section-label">
+        Real-Time Tracking
+      </span>
+
+      <h2>
+        📍 Nurse की Live Location Tracking
+      </h2>
+
+      <p>
+        Service assign होने के बाद user
+        अपने dashboard से nurse की
+        location और estimated arrival
+        देख सकेगा।
+      </p>
+
+
+      <div class="tracking-features">
+
+        <div>
+          📍
+          <strong>
+            Live Location
+          </strong>
+        </div>
+
+        <div>
+          🗺️
+          <strong>
+            Route Map
+          </strong>
+        </div>
+
+        <div>
+          ⏱️
+          <strong>
+            Estimated Time
+          </strong>
+        </div>
+
+      </div>
+
+
+      <button
+        class="primary-btn"
+        onclick="trackNurse()"
+      >
+        Track Nurse Now →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats-section">
+
+  <div class="container stats-grid">
+
+
+    <div class="stat">
+
+      <strong>
+        500+
+      </strong>
+
+      <span>
+        Registered Users
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        200+
+      </strong>
+
+      <span>
+        Trained Nurses
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        24/7
+      </strong>
+
+      <span>
+        Support Available
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        100%
+      </strong>
+
+      <span>
+        Care Focused
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+  class="about-section"
+  id="about"
+>
+
+  <div class="container about-container">
+
+
+    <div>
+
+      <span class="section-label">
+        About Us
+      </span>
+
+      <h2>
+        घर पर बेहतर Care,
+        आपके अपनों के लिए
+      </h2>
+
+      <p>
+        Seva Sathi का उद्देश्य मरीजों
+        और उनके परिवारों को convenient
+        और professional home nursing
+        services उपलब्ध कराना है।
+      </p>
+
+      <p>
+        हमारी website पर user service
+        request कर सकता है, booking
+        देख सकता है और assigned nurse
+        को track कर सकता है।
+      </p>
+
+    </div>
+
+
+    <div class="about-highlight">
+
+      <div>
+
+        <span>
+          ❤️
+        </span>
+
+        <strong>
+          Care
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <span>
+          🛡️
+        </span>
+
+        <strong>
+          Safety
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <span>
+          🤝
+        </span>
+
+        <strong>
+          Trust
+        </strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TESTIMONIAL
+===================================================== -->
+
+<section class="testimonial-section">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <span>
+        Happy Patients
+      </span>
+
+      <h2>
+        हमारे मरीजों की प्रतिक्रिया
+      </h2>
+
+    </div>
+
+
+    <div class="testimonial-grid">
+
+
+      <div class="testimonial">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “घर पर nursing care मिलने से
+          हमारे परिवार को काफी सुविधा हुई।”
+        </p>
+
+        <strong>
+          — Patient Family
+        </strong>
+
+      </div>
+
+
+
+      <div class="testimonial">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “Service request करना आसान
+          और convenient है।”
+        </p>
+
+        <strong>
+          — Home Care User
+        </strong>
+
+      </div>
+
+
+
+      <div class="testimonial">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p>
+          “Assigned nurse की information
+          और tracking बहुत उपयोगी feature है।”
+        </p>
+
+        <strong>
+          — Patient
+        </strong>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT / EMERGENCY
+===================================================== -->
+
+<section
+  class="contact-section"
+  id="contact"
+>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span>
+        Contact Us
+      </span>
+
+      <h2>
+        Seva Sathi से संपर्क करें
+      </h2>
+
+      <p>
+        Booking या सहायता के लिए
+        हमसे संपर्क करें।
+      </p>
+
+    </div>
+
+
+    <div
+      style="
+        display:flex;
+        justify-content:center;
+        gap:15px;
+        flex-wrap:wrap;
+        margin-top:25px;
+      "
+    >
+
+      <button
+        class="primary-btn"
+        onclick="bookService()"
+      >
+        📅 Book Service
+      </button>
+
+
+      <button
+        class="secondary-btn"
+        onclick="emergencyCall()"
+      >
+        🚑 Emergency 108
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="container footer-grid">
+
+
+    <div class="footer-brand">
+
+      <h2>
+        ❤️ Seva Sathi
+      </h2>
+
+      <p>
+        घर पर सेवा | अपनों की देखभाल
+      </p>
+
+      <p>
+        सेवा • सुरक्षा • भरोसा
+      </p>
+
+    </div>
+
+
+
+    <div>
+
+      <h3>
+        Quick Links
+      </h3>
+
+      <a href="#home">
+        Home
+      </a>
+      
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About Us
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+
+
+    <div>
+
+      <h3>
+        Our Services
+      </h3>
+
+      <a href="#services">
+        Patient Care
+      </a>
+
+      <a href="#services">
+        Elderly Care
+      </a>
+
+      <a href="#services">
+        Post Hospital Care
+      </a>
+
+      <a href="#services">
+        Vital Monitoring
+      </a>
+
+    </div>
+
+
+
+    <div>
+
+      <h3>
+        Contact Us
+      </h3>
+
+      <p>
+        💬 WhatsApp Support
+      </p>
+
+      <p>
+        📍 Rajasthan, India
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 Seva Sathi.
+    All Rights Reserved.
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="modal"
+>
+
+  <div class="modal-box">
+
+    <button
+      class="close-btn"
+      onclick="closeModal()"
+    >
+      ×
+    </button>
+
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SCRIPT
+===================================================== -->
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-compat.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
