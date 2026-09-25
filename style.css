@@ -1825,4 +1825,66 @@ footer > .container p {
     overflow-wrap: break-word;
   }
 }
-   
+ /* =====================================================
+   PC + MOBILE MENU BUTTON
+===================================================== */
+
+.menu-btn {
+  display: block !important;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  color: #0878d1;
+  cursor: pointer;
+}
+
+/* Menu hidden by default */
+.navbar {
+  display: none;
+}
+
+/* Menu open होने पर */
+.navbar.open {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 68px;
+  right: 20px;
+  width: 240px;
+  background: white;
+  padding: 10px;
+  gap: 0;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  z-index: 2000;
+}
+
+.navbar.open > a {
+  padding: 12px;
+  border-bottom: 1px solid #edf1f4;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+
+  .nav-container {
+    position: relative;
+  }
+
+  .navbar.open {
+    left: auto;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .navbar.open {
+    left: 4%;
+    right: 4%;
+    width: auto;
+    top: 68px;
+  }
+
+}  
